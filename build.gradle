@@ -1,0 +1,30 @@
+group 'itsm'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-core:4.3.18.RELEASE'
+    compile 'org.springframework:spring-beans:4.3.18.RELEASE'
+    compile 'org.springframework:spring-context:4.3.18.RELEASE'
+    compile 'org.springframework:spring-context-support:4.3.18.RELEASE'
+
+
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'itsm.clientMain.ClientMain'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
