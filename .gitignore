@@ -3,3 +3,4 @@
 .gitattributes
 /out
 /.gradle
+/springGreetingsClient.iml
