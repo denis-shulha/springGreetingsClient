@@ -1,5 +1,5 @@
 FROM UBUNTU
-RUN APT-GET update \
+RUN apt-get update \
 && apt-get install -y git gradle \
 && git clone https://github.com/denis-shulha/springgreetingsclient.git \
 && cd springgreetingsclient/ \
