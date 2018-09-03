@@ -15,7 +15,8 @@ public class ClientMain {
         }
         else {
             message = args[0];
-            context.getBean(SpringGreetingsClient.class).sendRequest(message);
+           String response = context.getBean(SpringGreetingsClient.class).sendRequest(message);
+           System.out.println(response);
         }
 
     }
