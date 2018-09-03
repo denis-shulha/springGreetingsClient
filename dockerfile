@@ -2,7 +2,7 @@ FROM UBUNTU
 RUN APT-GET update \
 && apt-get install -y git gradle \
 && git clone https://github.com/denis-shulha/springgreetingsclient.git \
-&& cd springGreetingsClient/ \
+&& cd springgreetingsclient/ \
 && gradle build \
 && cd build/libs/ \
 && mv springGreetingsClient-1.0.jar /usr/bin/springGreetingsClient.jar \
