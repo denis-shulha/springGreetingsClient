@@ -1,4 +1,4 @@
-FROM UBUNTU
+FROM ubuntu
 RUN apt-get update \
 && apt-get install -y git gradle \
 && git clone https://github.com/denis-shulha/springgreetingsclient.git \
