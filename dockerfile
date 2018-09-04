@@ -5,5 +5,5 @@ RUN apt-get update \
 && cd springgreetingsclient/ \
 && gradle build \
 && cd build/libs/ \
-&& mv springGreetingsClient-1.0.jar /usr/bin/springGreetingsClient.jar 
-ENTRYPOINT ["java","-jar","/usr/bin/springGreetingsClient.jar"]
+&& mv springGreetingsClient-1.0.jar /usr/bin/springGreetingsClient.jar \
+ENTRYPOINT["java","-jar","/usr/bin/springGreetingsClient.jar"]
